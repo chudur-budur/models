@@ -156,6 +156,24 @@ Finally, if you are using nlp packages, please also install
 pip3 install tensorflow-text-nightly
 ```
 
+## Notes from this repo: Problem with pycocotools and how to fix it
+
+First, you need to install tensorflow, this README assumes that you already have one.
+
+```shell
+pip3 install tensorflow
+```
+
+Then install the dependencies.
+
+```shell
+pip3 install -r official/requirements.txt
+```
+
+The `pycocotools` that comes from PyPi is buggy. So reinstall this from [here](
+git@github.com:chudur-budur/cocoapi.git).
+
+
 ## Contributions
 
 If you want to contribute, please review the [contribution guidelines](https://github.com/tensorflow/models/wiki/How-to-contribute).
