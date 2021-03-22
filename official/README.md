@@ -176,10 +176,15 @@ The `pycocotools` that comes from PyPi is buggy. So reinstall this from [here](h
 cd ~
 pip uninstall pycocotools
 git clone git@github.com:chudur-budur/cocoapi.git
-cd cocoapi
-cd PythonAPI
+cd cocoapi/PythonAPI
 make 
 make install
+```
+
+Inside the `model/configs` folder there are couple of config files for different experiments. Invoke them to run. For example, to run `retinanet` --
+
+```shell
+./run-experiments retinanet
 ```
 
 ## Contributions
