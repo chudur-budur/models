@@ -170,8 +170,7 @@ Then install the dependencies.
 pip3 install -r official/requirements.txt
 ```
 
-The `pycocotools` that comes from PyPi is buggy. So reinstall this from [here](
-git@github.com:chudur-budur/cocoapi.git).
+The `pycocotools` that comes from PyPi is buggy. So reinstall this from [here](https://github.com/chudur-budur/cocoapi).
 
 
 ## Contributions
