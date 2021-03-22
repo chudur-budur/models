@@ -172,6 +172,15 @@ pip3 install -r official/requirements.txt
 
 The `pycocotools` that comes from PyPi is buggy. So reinstall this from [here](https://github.com/chudur-budur/cocoapi).
 
+```shell
+cd ~
+pip uninstall pycocotools
+git clone git@github.com:chudur-budur/cocoapi.git
+cd cocoapi
+cd PythonAPI
+make 
+make install
+```
 
 ## Contributions
 
