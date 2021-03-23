@@ -62,5 +62,5 @@ It will take like 20 minutes on GCP.
 Inside the `model/configs` folder there are couple of config files for different experiments. Invoke them to run. For example, to run `retinanet` --
 
 ```shell
-./run-experiments retinanet
+./train retinanet
 ```
