@@ -1,6 +1,6 @@
 type: 'retinanet'
 train:
-    train_file_pattern: '$HOME/experiments/retinanet/train'
+    train_file_pattern: '$HOME/tfrecrods/coco_train'
 eval:
-    eval_file_pattern: '$HOME/experiments/retinanet/eval'
-    val_json_file: '$HOME/experiments/retinanet/eval-annotations'
+    eval_file_pattern: '$HOME/tfrecords/coco_val'
+    val_json_file: '$HOME/cocodataset/annotations/instances_val2017.json'

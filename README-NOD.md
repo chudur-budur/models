@@ -50,7 +50,7 @@ Download the COCO2017 dataset (in this case we keep them in `~/cocodataset`), ju
     /unlabeled2017
 ```
 
-Now run the COCO format to TFRecord converter --
+Now run the converter script to transform COCO dataset to TFRecords. Here we are doing the conversion on the `instances_*2017.json` --
 
 ```
 cd ~/models
