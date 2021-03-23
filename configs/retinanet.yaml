@@ -1,6 +1,6 @@
 type: 'retinanet'
 train:
-    train_file_pattern: '/home/khaled/tfr2014/coco_train.record-*'
+    train_file_pattern: '/home/khaled/tfr2014/coco_train.record-?????-of-00100'
 eval:
-    eval_file_pattern: '/home/khaled/tfr2014/coco_val.record-*'
+    eval_file_pattern: '/home/khaled/tfr2014/coco_val.record-?????-of-00050'
     val_json_file: '/home/khaled/coco2014/annotations/instances_val2014.json'
