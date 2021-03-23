@@ -1,5 +1,5 @@
 PROJ_HOME="$HOME/models"
-MODEL_DIR="$HOME/experiments/retinanet/models"
+MODEL_DIR="$HOME/experiments/models/retinanet"
 PYTHONPATH=$PROJ_HOME python3 $PROJ_HOME/official/vision/detection/main.py \
     --strategy_type=mirrored \
     --num_gpus=2 \
