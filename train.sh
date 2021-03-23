@@ -1,6 +1,6 @@
 PROJ_HOME="$HOME/models"
 MODEL_DIR="$HOME/experiments/models/retinanet"
-PYTHONPATH=$PROJ_HOME CUDA_VISIBLE_DEVICES=2 python3 $PROJ_HOME/official/vision/detection/main.py \
+PYTHONPATH=$PROJ_HOME CUDA_VISIBLE_DEVICES=0 python3 $PROJ_HOME/official/vision/detection/main.py \
     --strategy_type=one_device \
     --num_gpus=1 \
     --model_dir="${MODEL_DIR?}" \
