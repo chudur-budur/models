@@ -156,37 +156,6 @@ Finally, if you are using nlp packages, please also install
 pip3 install tensorflow-text-nightly
 ```
 
-## Notes from this repo: Problem with pycocotools and how to fix it
-
-First, you need to install tensorflow, this README assumes that you already have one.
-
-```shell
-pip3 install tensorflow
-```
-
-Then install the dependencies.
-
-```shell
-pip3 install -r official/requirements.txt
-```
-
-The `pycocotools` that comes from PyPi is buggy. So reinstall this from [here](https://github.com/chudur-budur/cocoapi).
-
-```shell
-cd ~
-pip uninstall pycocotools
-git clone git@github.com:chudur-budur/cocoapi.git
-cd cocoapi/PythonAPI
-make 
-make install
-```
-
-Inside the `model/configs` folder there are couple of config files for different experiments. Invoke them to run. For example, to run `retinanet` --
-
-```shell
-./run-experiments retinanet
-```
-
 ## Contributions
 
 If you want to contribute, please review the [contribution guidelines](https://github.com/tensorflow/models/wiki/How-to-contribute).
