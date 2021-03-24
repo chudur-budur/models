@@ -489,7 +489,7 @@ class DistributedExecutor(object):
       _run_callbacks_on_batch_begin(current_step)
       train_loss = train_step(train_iterator,
                               tf.convert_to_tensor(num_steps, dtype=tf.int32))
-      logging.info("----------> train_loss =", train_loss)
+      logging.info("----------> [distributed_executor] train_loss = %s", train_loss)
       current_step += num_steps
 
       train_loss = tf.nest.map_structure(lambda x: x.numpy().astype(float),
