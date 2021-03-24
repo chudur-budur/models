@@ -82,7 +82,6 @@ class InputFn(object):
     assert batch_size is not None
     dataset = tf.data.Dataset.list_files(
         self._file_pattern, shuffle=self._is_training)
-    print("------------------> len(dataset):", len(dataset))
 
     if self._input_sharding and ctx and ctx.num_input_pipelines > 1:
       dataset = dataset.shard(ctx.num_input_pipelines, ctx.input_pipeline_id)
