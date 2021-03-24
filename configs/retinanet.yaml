@@ -1,8 +1,8 @@
 type: 'retinanet'
 train:
-    train_file_pattern: '$HOME/tfr2014/coco_train.*'
+    train_file_pattern: '${HOME}/tfr2014/coco_train.*'
     batch_size: 8
 eval:
-    eval_file_pattern: '$HOME/tfr2014/coco_val.*'
-    val_json_file: '$HOME/coco2014/annotations/instances_val2014.json'
+    eval_file_pattern: '${HOME}/tfr2014/coco_val.*'
+    val_json_file: '${HOME}/coco2014/annotations/instances_val2014.json'
     batch_size: 1
