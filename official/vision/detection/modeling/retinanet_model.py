@@ -18,6 +18,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+from absl import logging
+
 import tensorflow as tf
 
 from official.vision.detection.dataloader import mode_keys
@@ -98,18 +100,20 @@ class RetinanetModel(base_model.Model):
       cls_loss = self._cls_loss_fn(outputs['cls_outputs'],
                                    labels['cls_targets'],
                                    labels['num_positives'])
-      # print("------------------> cls_loss:", cls_loss)
+      logging.info('----------> [retinanet_model.py] cls_loss =', cls_loss)
       box_loss = self._box_loss_fn(outputs['box_outputs'],
                                    labels['box_targets'],
                                    labels['num_positives'])
-      # print("------------------> box_loss:", box_loss)
-      # print("------------------> self._box_loss_weight:", self._box_loss_weight)
+      logging.info('----------> [retinanet_model.py] box_loss =', box_loss)
+      logging.info('----------> [retinanet_model.py] self._box_loss_weight =', \
+                        self._box_loss_weight)
       model_loss = cls_loss + self._box_loss_weight * box_loss
-      # print("------------------> model_loss:", model_loss)
+      logging.info('----------> [retinanet_model.py] model_loss =', model_loss)
       l2_regularization_loss = self.weight_decay_loss(trainable_variables)
-      # print("------------------> l2_regularization_loss:", l2_regularization_loss)
+      logging.info('----------> [retinanet_model.py] l2_regularization_loss =', \
+                        l2_regularization_loss)
       total_loss = model_loss + l2_regularization_loss
-      # print("------------------> total_loss:", total_loss)
+      logging.info('----------> [retinanet_model.py] total_loss =', total_loss)
       return {
           'total_loss': total_loss,
           'cls_loss': cls_loss,
