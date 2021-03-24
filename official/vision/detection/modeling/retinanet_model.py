@@ -103,7 +103,8 @@ class RetinanetModel(base_model.Model):
                                    labels['num_positives'])
       model_loss = cls_loss + self._box_loss_weight * box_loss
       l2_regularization_loss = self.weight_decay_loss(trainable_variables)
-      total_loss = model_loss + l2_regularization_loss
+      # total_loss = model_loss + l2_regularization_loss
+      total_loss = model_loss
       return {
           'total_loss': total_loss,
           'cls_loss': cls_loss,
