@@ -50,11 +50,11 @@ Download the COCO2017 dataset (in this case we keep them in `~/cocodataset`), ju
     /unlabeled2017
 ```
 
-Now run the converter script to transform COCO dataset to TFRecords. Here we are doing the conversion on the `instances_*2017.json` --
+Fix the `research/object_detection/dataset_tools/create_coco_tf_record.py` file. Follow the instruction in [`https://github.com/tensorflow/tensorflow/issues/17353#issuecomment-708624734`](https://github.com/tensorflow/tensorflow/issues/17353#issuecomment-708624734). Now run the converter script to transform COCO dataset to TFRecords. Here we are doing the conversion on the `instances_*2017.json` --
 
 ```
 cd ~/models
-./coco2tfr
+./coco2tfr.sh
 ```
 
 It will take like 20 minutes on GCP.
