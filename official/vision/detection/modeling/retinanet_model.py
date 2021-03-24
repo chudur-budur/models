@@ -117,7 +117,7 @@ class RetinanetModel(base_model.Model):
               tf.strings.as_string(l2_regularization_loss))
       total_loss = model_loss + l2_regularization_loss
       logging.info('----------> [retinanet_model.py] total_loss = %s', \
-              tf.string.as_string(total_loss))
+              tf.strings.as_string(total_loss))
       return {
           'total_loss': total_loss,
           'cls_loss': cls_loss,
