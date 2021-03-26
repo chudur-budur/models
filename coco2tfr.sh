@@ -1,10 +1,10 @@
 PROJ_HOME="$HOME/models/research"
 DATA_ROOT="/nodclouddata/mscoco"
 PYTHONPATH=$PROJ_HOME python3 $PROJ_HOME/object_detection/dataset_tools/create_coco_tf_record.py \
-   --train_image_dir=$DATA_ROOT/coco2014/train2014 \
-   --val_image_dir=$DATA_ROOT/coco2014/val2014 \
-   --test_image_dir=$DATA_ROOT/coco2014/test2014 \
-   --train_annotations_file=$DATA_ROOT/coco2014/annotations/instances_train2014.json \
-   --val_annotations_file=$DATA_ROOT/coco2014/annotations/instances_val2014.json \
-   --testdev_annotations_file=$DATA_ROOT/coco2014/annotations/image_info_test2014.json \
-   --output_dir=$DATA_ROOT/tfr2014
+   --train_image_dir=$DATA_ROOT/coco2017/train2014 \
+   --val_image_dir=$DATA_ROOT/coco2017/val2017 \
+   --test_image_dir=$DATA_ROOT/coco2017/test2017 \
+   --train_annotations_file=$DATA_ROOT/coco2017/annotations/instances_train2017.json \
+   --val_annotations_file=$DATA_ROOT/coco2017/annotations/instances_val2017.json \
+   --testdev_annotations_file=$DATA_ROOT/coco2017/annotations/image_info_test-dev2017.json \
+   --output_dir=$DATA_ROOT/tfr2017
