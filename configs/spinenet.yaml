@@ -3,7 +3,7 @@ architecture:
     backbone: 'spinenet'
     multilevel_features: 'identity'
 spinenet: 
-    model_id: 190
+    model_id: '190'
 train:
     train_file_pattern: '/nodclouddata/mscoco/coco2017/tfr2017/coco_train.*'
     batch_size: 8
