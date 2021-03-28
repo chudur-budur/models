@@ -6,5 +6,5 @@ CUDA_VISIBLE_DEVICES=1 PYTHONPATH=$PROJ_HOME \
     --num_gpus=1 \
     --model_dir="${MODEL_DIR?}" \
     --mode=eval \
-    --model=spinenet \
+    --model=retinanet \
     --config_file="$PROJ_HOME/configs/spinenet.yaml"
