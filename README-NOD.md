@@ -41,7 +41,7 @@ Download the COCO2017 dataset (in this case we keep them in `/nodclouddata/mscoc
     + /unlabeled2017
 ```
 
-Fix the `research/object_detection/dataset_tools/create_coco_tf_record.py` file. Follow the instruction in [`https://github.com/tensorflow/tensorflow/issues/17353#issuecomment-708624734`](https://github.com/tensorflow/tensorflow/issues/17353#issuecomment-708624734). Now run the converter script to transform COCO dataset to TFRecords. Here we are doing the conversion on the `instances_*2017.json` --
+Fix the [`create_coco_tf_record.py`](https://github.com/chudur-budur/models/blob/master/research/object_detection/dataset_tools/create_coco_tf_record.py) file. Follow the instructions from [here](https://github.com/tensorflow/tensorflow/issues/17353#issuecomment-708624734). Now run the converter script to transform COCO dataset to TFRecords. Here we are doing the conversion on the `instances_****2017.json` --
 
 ```
 cd ~/models
@@ -50,8 +50,10 @@ cd ~/models
 
 It will take like 20 minutes on GCP.
 
-Inside the `model/configs` folder there are couple of config files for different experiments. Invoke them to run. For example, to run `retinanet` --
+Inside the `model/configs` folder there are couple of config files for different experiments. Invoke them to run. For example, to run `retinanet` with `spine-49` backbone --
 
 ```shell
-./train retinanet
+./train
 ```
+
+Hope this helps!!
