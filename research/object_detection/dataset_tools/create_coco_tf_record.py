@@ -293,43 +293,26 @@ def create_tf_example(image,
     return (key, None, num_annotations_skipped,
             num_keypoint_annotation_skipped, num_densepose_annotation_skipped)
   feature_dict = {
-      'image/height':
-          dataset_util.int64_feature(image_height),
-      'image/width':
-          dataset_util.int64_feature(image_width),
-      'image/filename':
-          dataset_util.bytes_feature(filename.encode('utf8')),
-      'image/source_id':
-          dataset_util.bytes_feature(str(image_id).encode('utf8')),
-      'image/key/sha256':
-          dataset_util.bytes_feature(key.encode('utf8')),
-      'image/encoded':
-          dataset_util.bytes_feature(encoded_jpg),
-      'image/format':
-          dataset_util.bytes_feature('jpeg'.encode('utf8')),
-      'image/object/bbox/xmin':
-          dataset_util.float_list_feature(xmin),
-      'image/object/bbox/xmax':
-          dataset_util.float_list_feature(xmax),
-      'image/object/bbox/ymin':
-          dataset_util.float_list_feature(ymin),
-      'image/object/bbox/ymax':
-          dataset_util.float_list_feature(ymax),
-      #'image/object/class/text':
-      #    dataset_util.bytes_list_feature(category_names),
+      'image/height': dataset_util.int64_feature(image_height),
+      'image/width': dataset_util.int64_feature(image_width),
+      'image/filename': dataset_util.bytes_feature(filename.encode('utf8')),
+      'image/source_id': dataset_util.bytes_feature(str(image_id).encode('utf8')),
+      'image/key/sha256': dataset_util.bytes_feature(key.encode('utf8')),
+      'image/encoded': dataset_util.bytes_feature(encoded_jpg),
+      'image/format': dataset_util.bytes_feature('jpeg'.encode('utf8')),
+      'image/object/bbox/xmin': dataset_util.float_list_feature(xmin),
+      'image/object/bbox/xmax': dataset_util.float_list_feature(xmax),
+      'image/object/bbox/ymin': dataset_util.float_list_feature(ymin),
+      'image/object/bbox/ymax': dataset_util.float_list_feature(ymax),
+      # 'image/object/class/text': dataset_util.bytes_list_feature(category_names),
       # The below 3 lines should fix the indices[0] = 0 is not in [0,0) problem.
       # At least according to https://github.com/tensorflow/tensorflow/issues/17353 
-      'image/object/bbox/class/label': 
-          dataset_util.int64_list_feature(category_ids),
-      'image/object/class/text': 
-          dataset_util.bytes_list_feature(category_names), 
-      'image/object/class/label': 
-          dataset_util.int64_list_feature(category_ids),
+      'image/object/bbox/class/label': dataset_util.int64_list_feature(category_ids),
+      'image/object/class/text': dataset_util.bytes_list_feature(category_names), 
+      'image/object/class/label': dataset_util.int64_list_feature(category_ids),
       ##
-      'image/object/is_crowd':
-          dataset_util.int64_list_feature(is_crowd),
-      'image/object/area':
-          dataset_util.float_list_feature(area),
+      'image/object/is_crowd': dataset_util.int64_list_feature(is_crowd),
+      'image/object/area': dataset_util.float_list_feature(area),
   }
   if include_masks:
     feature_dict['image/object/mask'] = (
