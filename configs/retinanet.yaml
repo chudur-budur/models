@@ -1,8 +1,0 @@
-type: 'retinanet'
-train:
-    train_file_pattern: '/nodclouddata/mscoco/tfr2014/coco_train.*'
-    batch_size: 8
-eval:
-    eval_file_pattern: '/nodclouddata/mscoco/tfr2014/coco_val.*'
-    val_json_file: '/nodclouddata/mscoco/coco2014/annotations/instances_val2014.json'
-    batch_size: 8
