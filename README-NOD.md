@@ -1,6 +1,6 @@
 # Some Notes on How to Run Experiments on Custom Data
 
-First, this code won't work on the latest python. So you need to use python older than `<3.7.0`. In this case we are using `3.6.13`. To know how to maintain multiple python version and sandboxing installation, please see [pyenv](https://github.com/pyenv/pyenv) and [pipenv](https://github.com/pypa/pipenv). 
+First, this code won't work on the latest python. So you need to use python older than `<3.7.0`. In this case we are using `3.6.13`. To know how to maintain multiple python versions and sandboxing them, please see [pyenv](https://github.com/pyenv/pyenv) and [pipenv](https://github.com/pypa/pipenv). 
 
 Then install tensorflow -- 
 
