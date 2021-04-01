@@ -30,10 +30,10 @@ pip install --use-feature=2020-resolver .
 python object_detection/builders/model_builder_tf2_test.py
 ```
 
-Download the COCO2017 dataset (in this case we keep them in `/nodclouddata/mscoco/coco2017`), just download the zips and extract them. They should come up like this:
+Download the COCO2017 dataset (in this case we keep them in `gs://$GS_ROOT/mscoco/coco2017`), just download the zips and extract them. They should come up like this:
 
 ```
-/nodclouddata/mscoco/coco2017
+gs://$GS_ROOT/mscoco/coco2017
     + /train2017
     + /val2017
     + /test2017
